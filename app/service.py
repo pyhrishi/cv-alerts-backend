@@ -49,22 +49,30 @@ def _sample_list(name: str) -> list:
     return obj if isinstance(obj, list) else obj.get("sample", [])
 
 
+def _first_existing(*names: str) -> str | None:
+    for n in names:
+        if (SAMPLES / n).exists():
+            return n
+    return None
+
+
 def _load_snapshot() -> RawTriple:
-    """Prefer full *.raw.json dumps (local/dev) and fall back to the committed trimmed samples."""
-    comps = _sample_list("components.raw.json") if (SAMPLES / "components.raw.json").exists() \
-        else _sample_list("components.json")
-    acts = _sample_list("activities.raw.json") if (SAMPLES / "activities.raw.json").exists() \
-        else _sample_list("activities_alldata.json")
-    if (SAMPLES / "component_vulns.raw.json").exists():
-        vuln_map = json.loads((SAMPLES / "component_vulns.raw.json").read_text(encoding="utf-8"))
-    else:
-        vuln_map = {}
+    """Load the bundled snapshot. Preference order:
+       1. *.snapshot.json  — the full committed dataset that ships to the deployed demo,
+       2. *.raw.json       — full local dumps (dev, gitignored),
+       3. trimmed *.json    — the tiny committed test fixtures (last resort)."""
+    comps = _sample_list(_first_existing("components.snapshot.json", "components.raw.json", "components.json") or "components.json")
+    acts = _sample_list(_first_existing("activities.snapshot.json", "activities.raw.json", "activities_alldata.json") or "activities_alldata.json")
+    vm_name = _first_existing("component_vulns.snapshot.json", "component_vulns.raw.json")
+    vuln_map = json.loads((SAMPLES / vm_name).read_text(encoding="utf-8")) if vm_name else {}
     return comps, acts, vuln_map
 
 
 def _load_raw() -> tuple[RawTriple, str]:
-    if os.getenv("CV_FORCE_SNAPSHOT") == "1":
+    # DATA_MODE=snapshot (default, and what the public Render demo runs): NEVER touch the Center.
+    if config.data_mode() == "snapshot" or os.getenv("CV_FORCE_SNAPSHOT") == "1":
         return _load_snapshot(), "snapshot"
+    # DATA_MODE=live (local dev with a token): call the Center, fall back to snapshot on any failure.
     try:
         return _fetch_live(), "live"
     except Exception:  # noqa: BLE001 — any transport/auth/empty error -> graceful fallback

@@ -1,5 +1,7 @@
 # Render infrastructure-as-code for the Cyber Vision alert backend.
-# Secrets are NOT here — set CV_BASE_URL, CV_API_TOKEN, ALLOWED_ORIGINS in the Render dashboard.
+# The PUBLIC demo runs DATA_MODE=snapshot: it serves the bundled docs/api-samples/*.snapshot.json
+# and NEVER calls the Center, so no token is needed and no live OT telemetry is exposed.
+# For a live deployment, set DATA_MODE=live and provide CV_BASE_URL + CV_API_TOKEN in the dashboard.
 services:
   - type: web
     name: cv-alerts-backend
@@ -9,11 +11,14 @@ services:
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
     healthCheckPath: /healthz
     envVars:
-      - key: CV_BASE_URL
-        sync: false          # set in dashboard (never in git)
-      - key: CV_API_TOKEN
-        sync: false          # set in dashboard (never in git)
+      - key: DATA_MODE
+        value: snapshot            # public demo: bundled data only, never calls the Center
       - key: ALLOWED_ORIGINS
-        sync: false          # the Vercel frontend URL, e.g. https://cv-alerts-frontend.vercel.app
+        value: "http://localhost:3000"   # PLACEHOLDER — replaced with the exact Vercel URL after FE deploy
       - key: CACHE_TTL_SECONDS
         value: "60"
+      # --- live mode only (leave unset for the snapshot demo) ---
+      - key: CV_BASE_URL
+        sync: false                # dashboard-only; required only when DATA_MODE=live
+      - key: CV_API_TOKEN
+        sync: false                # dashboard-only; required only when DATA_MODE=live

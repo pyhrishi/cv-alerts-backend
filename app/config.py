@@ -37,3 +37,11 @@ def allowed_origins() -> list[str]:
 def cache_ttl_seconds() -> float:
     return float(os.getenv("CACHE_TTL_SECONDS", "60"))
 
+
+def data_mode() -> str:
+    """'snapshot' (default) serves the bundled sample data and NEVER calls the Center — safe for a
+    public demo URL. 'live' calls the Center (requires CV_BASE_URL + CV_API_TOKEN) and falls back
+    to snapshot if it's unreachable. The data_source field in responses always reflects reality."""
+    mode = os.getenv("DATA_MODE", "snapshot").strip().lower()
+    return mode if mode in ("snapshot", "live") else "snapshot"
+

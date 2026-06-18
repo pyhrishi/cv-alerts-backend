@@ -1,0 +1,95 @@
+# =============================================================================
+# EXPECTED-STATE OT POLICY  —  the "brain" of the Security alert
+# =============================================================================
+# WHY THIS FILE EXISTS
+#   Cyber Vision can learn a "baseline" and raise deviation events itself, but on
+#   THIS instance /baselines is empty and /events 404s (see docs/API-FINDINGS.md).
+#   So we author the expected state ourselves. This file encodes what "normal"
+#   looks like for this OT network; the security detector flags anything that
+#   violates it. Edit this file to retune the security alert — no code change.
+#
+# HOW IT WAS DERIVED
+#   Every value below was taken from the REAL discovered data (180 components,
+#   300 activities). Subnets, vendors and protocols are the ones actually present
+#   in this Center, not invented. See scripts/analyze output in docs/ALERT-SPEC.md.
+#
+# PURDUE MODEL (IEC 62443 / NIST SP 800-82r3 zoning)
+#   The network is layered. Traffic should only cross BETWEEN ADJACENT layers,
+#   through a controller/conduit. A field device (Level 0-1) talking straight to
+#   a supervisory/IT host (Level 3-4) skips the control layer — a classic
+#   zone-and-conduit violation.
+# =============================================================================
+
+version: 1
+reference_now_strategy: "max_last_activity"   # static capture: "now" = newest activity in the dataset
+
+# --- Purdue levels present in the data, with a numeric rank for adjacency math -
+purdue_levels:
+  "Level 0-1": 1      # field I/O: sensors, drives, IO modules
+  "Level 2":   2      # area control: PLCs, controllers, managed cell switches
+  "Level 3-4": 3      # site operations / IT: SCADA hosts, historians, workstations
+
+# Allowed adjacencies = pairs of ranks permitted to communicate directly.
+# Same-level traffic is always allowed. Anything NOT listed here is a violation.
+allowed_level_adjacencies:
+  - [1, 2]    # field  <-> control      (e.g. IO module <-> PLC)  NORMAL
+  - [2, 3]    # control <-> site/IT     (e.g. PLC <-> SCADA)       NORMAL
+# NOTE: [1, 3] is deliberately ABSENT -> field-to-IT directly is a SKIP_LEVEL violation.
+
+# --- Network zones (real /24s observed on this Center) -----------------------
+# Anything inside these ranges is "internal OT". Anything routable outside them
+# (and not multicast/broadcast) counts as an external conversation.
+ot_networks:
+  - "192.168.0.0/24"
+  - "192.168.10.0/24"
+  - "192.168.20.0/24"
+  - "192.168.30.0/24"
+  - "192.168.40.0/24"
+  - "192.168.50.0/24"
+  - "192.168.60.0/24"
+  - "172.26.16.0/24"     # management / inter-cell segment
+non_external_prefixes:    # never treated as "external" even if outside ot_networks
+  - "224.0.0.0/4"         # IPv4 multicast
+  - "255.255.255.255/32"  # broadcast
+  - "0.0.0.0/32"
+
+# --- Controller identification (the assets we most want to protect) ----------
+# An asset is a "controller" if it carries one of these CV tags OR sits at Level 2.
+controller_tags: ["PLC", "Controller"]
+controller_level: "Level 2"
+
+# --- Known/expected vendors (derived from the real inventory) ----------------
+# OT automation + the network/endpoint vendors legitimately present here.
+# An UNKNOWN vendor (not on this list) talking to a controller is suspicious.
+known_vendors:
+  - "Rockwell Automation"
+  - "Siemens"
+  - "Siemens AG"
+  - "YASKAWA ELECTRIC CORPORATION"
+  - "ABB Automation products GmbH"
+  - "Banner Engineering"
+  - "FANUC ROBOTICS NORTH AMERICA, Inc."
+  - "TURCK, Inc."
+  - "Prosoft Technology, Inc"
+  - "Schneider Electric"        # present in the CVE catalog / MGE UPS devices
+  - "Cisco"                     # IE3400/IE9300 industrial switches
+  - "Cisco Systems, Inc"
+  - "Axis Communications AB"    # industrial cameras
+  - "Dell Inc."                 # site/IT hosts (Level 3-4)
+  - "VMware, Inc."
+  - "Intel Corporate"
+
+# --- Insecure / cleartext protocols ------------------------------------------
+# cleartext_app: unauthenticated/cleartext application protocols. Seeing these
+#   to a controller is a real finding (NIST 800-82 secure-comms guidance).
+# it_in_ot: enterprise-IT protocols that should not normally reach OT controllers.
+insecure_protocols:
+  cleartext_app: ["HTTP", "Telnet", "FTP", "TFTP"]
+  it_in_ot:      ["Netbios", "SMB", "DCE-RPC"]
+  # SNMP is intentionally NOT flagged here: SNMP to managed cell switches
+  # (IE3400/IE9300) is legitimate network management on this network and would
+  # otherwise flood the alert. Re-enable per-site if SNMPv1/v2c is disallowed.
+
+# --- Severity tuning knobs (documented rules live in docs/ALERT-SPEC.md) ------
+severity:
+  skip_level_gap_for_critical: 2   # rank gap >= 2 (e.g. Level 0-1 <-> Level 3-4) => critical

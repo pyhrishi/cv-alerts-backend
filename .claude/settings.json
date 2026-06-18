@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(pip3:*)",
+      "Bash(uvicorn:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(git:*)",
+      "Bash(pytest:*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Bash(./.venv/Scripts/python.exe -m pip install --quiet --upgrade pip httpx python-dotenv)",
+      "Bash(./.venv/Scripts/python.exe -c \"import httpx, dotenv; print\\('httpx', httpx.__version__\\); print\\('dotenv ok'\\)\")",
+      "Bash(./.venv/Scripts/python.exe -W ignore scripts/discover.py)",
+      "Bash(./.venv/Scripts/python.exe -W ignore scripts/discover2.py)",
+      "Bash(./.venv/Scripts/python.exe -W ignore scripts/discover3.py)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "PowerShell($c = Get-Command gh -ErrorAction SilentlyContinue; if \\($c\\) { \"FOUND: $\\($c.Source\\)\"; gh --version | Select-Object -First 1; \"--- auth ---\"; gh auth status } else { \"gh not found on PATH\" }; \"--- git remote check both repos ---\"; git -C \"C:\\\\Users\\\\HrishikeshSureshSaro\\\\Desktop\\\\cisco-cv-alert-framework\\\\cv-alerts-backend\" remote -v; git -C \"C:\\\\Users\\\\HrishikeshSureshSaro\\\\Desktop\\\\cisco-cv-alert-framework\\\\cv-alerts-frontend\" remote -v)",
+      "Bash(set -e)",
+      "Bash(mv docs *)",
+      "Bash(mv .claude cv-alerts-backend/.claude)",
+      "Bash(mv cv-alerts-backend/CLAUDE.md cv-alerts-backend/docs/BACKEND-NOTES.md)",
+      "Bash(mv CLAUDE.md cv-alerts-backend/CLAUDE.md)"
+    ],
+    "deny": [
+      "Read(./**/.env)",
+      "Read(**/.env)"
+    ]
+  }
+}

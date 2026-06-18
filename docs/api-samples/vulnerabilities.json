@@ -1,0 +1,69 @@
+{
+  "_endpoint": "/api/3.0/vulnerabilities",
+  "_item_count_in_sample": 5,
+  "sample": [
+    {
+      "id": "28576574-de6e-4cf6-9f4b-34110b909a9a",
+      "publishTime": 1524068940000,
+      "cve": "CVE-2018-7244",
+      "vendorId": "",
+      "title": "66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS | Schneider Electric - CVE-2018-7244",
+      "summary": "An information disclosure vulnerability exists In Schneider Electric's 66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS. The integrated web server (Port 80/443/TCP) of the affected devices could allow a remote attacker to obtain sensitive device information if network access was obtained.",
+      "fullDescription": "",
+      "solution": "Schneider proposes several mitigation solutions, including the use of replacement NMC kits, the application of configuration changes, and the use of SSL mode as default mode for the transmission of sensitive information. Further information can be found in the associated security notification by Schneider: https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+      "cvssVectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:U/RL:O/RC:C",
+      "CVSS": 5.3,
+      "CVSSVersion": 3,
+      "links": [
+        {
+          "id": "06241b89-6320-4eb0-9085-580c133e7928",
+          "title": "www.schneider-electric.com",
+          "link": "https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "ca30a02e-4400-40ba-a493-9eede126128a",
+      "publishTime": 1524068940000,
+      "cve": "CVE-2018-7245",
+      "vendorId": "",
+      "title": "66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS | Schneider Electric - CVE-2018-7245",
+      "summary": "An improper authorization vulnerability exists In Schneider Electric's 66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS. The integrated web server (Port 80/443/TCP) of the affected devices could allow a remote attacker to change UPS control and shutdown parameters or other critical settings without authorization.",
+      "fullDescription": "",
+      "solution": "Schneider proposes several mitigation solutions, including the use of replacement NMC kits, the application of configuration changes, and the use of SSL mode as default mode for the transmission of sensitive information. Further information can be found in the associated security notification by Schneider: https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+      "cvssVectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H/E:U/RL:O/RC:C",
+      "CVSS": 9.1,
+      "CVSSVersion": 3,
+      "links": [
+        {
+          "id": "878ae6cb-3611-4149-b126-8ccb0f775490",
+          "title": "www.schneider-electric.com",
+          "link": "https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+          "order": 0
+        }
+      ]
+    },
+    {
+      "id": "1e18c5c0-88e3-44fd-935a-cd0372529552",
+      "publishTime": 1524068940000,
+      "cve": "CVE-2018-7246",
+      "vendorId": "",
+      "title": "66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS | Schneider Electric - CVE-2018-7246",
+      "summary": "A cleartext transmission of sensitive information vulnerability exists in Schneider Electric's 66074 MGE Network Management Card Transverse installed in MGE UPS and MGE STS. he integrated web server (Port 80/443/TCP) of the affected devices could allow remote attackers to discover an administrative account. If default on device, it is not using a SSL in settings and if multiple request of the page \"Access Control\" (IP-address device/ups/pas_cont.htm) account data will be sent in cleartext",
+      "fullDescription": "",
+      "solution": "Schneider proposes several mitigation solutions, including the use of replacement NMC kits, the application of configuration changes, and the use of SSL mode as default mode for the transmission of sensitive information. Further information can be found in the associated security notification by Schneider: https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+      "cvssVectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+      "CVSS": 9.8,
+      "CVSSVersion": 3,
+      "links": [
+        {
+          "id": "ac70ec84-e9d8-4ad4-9db6-79c49564dc4f",
+          "title": "www.schneider-electric.com",
+          "link": "https://www.schneider-electric.com/en/download/document/SEVD-2018-074-01/",
+          "order": 0
+        }
+      ]
+    }
+  ]
+}

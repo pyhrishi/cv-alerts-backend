@@ -1,0 +1,435 @@
+{
+  "_endpoint": "/api/3.0/presets/ad6bfa43-c22c-4a1c-9d0c-d59c71b727b0/visualisations/activity-list",
+  "sample": [
+    {
+      "id": "1e240232-220c-4835-ac91-89c835acc597_c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+      "firstActivity": 1780993966686,
+      "lastActivity": 1780993994384,
+      "tags": [
+        {
+          "id": "ARP",
+          "label": "ARP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "CIP_IO",
+          "label": "CIP-IO",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "ENIP",
+          "label": "EthernetIP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        }
+      ],
+      "left": {
+        "id": "1e240232-220c-4835-ac91-89c835acc597",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "1734-AENTR/C Ethernet Adapter",
+        "originalLabel": "1734-AENTR/C Ethernet Adapter",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.30"
+        ],
+        "mac": [
+          "5c:88:16:ba:66:14"
+        ],
+        "tags": [
+          {
+            "id": "IO",
+            "label": "IO Module",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "514c15ba-07fe-58a6-ae89-21a72e25177b",
+              "label": "Device - Level 0-1",
+              "priority_order": 0
+            }
+          },
+          {
+            "id": "ROCKWELL_AUTOMATION",
+            "label": "Rockwell Automation",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "feebd529-0323-5eee-a3b3-aa8b471a293b",
+              "label": "System",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/rockwell_enip.svg"
+      },
+      "right": {
+        "id": "c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "1756-L84E LOGIX5580E",
+        "originalLabel": "1756-L84E LOGIX5580E",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.10"
+        ],
+        "mac": [
+          "84:8a:8d:c3:ff:00",
+          "84:8a:8d:c3:ff:03",
+          "f4:54:33:a4:10:a8"
+        ],
+        "tags": [
+          {
+            "id": "PLC",
+            "label": "Controller",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "43d1102e-037b-512d-8404-f26021ca6274",
+              "label": "Device - Level 2",
+              "priority_order": 0
+            }
+          },
+          {
+            "id": "ROCKWELL_AUTOMATION",
+            "label": "Rockwell Automation",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "feebd529-0323-5eee-a3b3-aa8b471a293b",
+              "label": "System",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/rockwell_enip.svg"
+      },
+      "direction": "undetermined",
+      "flowCount": 0,
+      "eventsCount": 0,
+      "packetsCount": 2507,
+      "bytesCount": 172340,
+      "variablesCount": 0,
+      "variables": null
+    },
+    {
+      "id": "2e0ca2cd-6356-49d1-8126-207821642fae_c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+      "firstActivity": 1780993966686,
+      "lastActivity": 1780993994384,
+      "tags": [
+        {
+          "id": "ARP",
+          "label": "ARP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "CIP_IO",
+          "label": "CIP-IO",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "ENIP",
+          "label": "EthernetIP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        }
+      ],
+      "left": {
+        "id": "2e0ca2cd-6356-49d1-8126-207821642fae",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "CIMR-AU4A0009",
+        "originalLabel": "CIMR-AU4A0009",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.73"
+        ],
+        "mac": [
+          "00:20:b5:1c:af:c2"
+        ],
+        "tags": [
+          {
+            "id": "IO",
+            "label": "IO Module",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "514c15ba-07fe-58a6-ae89-21a72e25177b",
+              "label": "Device - Level 0-1",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/yaskawa.png"
+      },
+      "right": {
+        "id": "c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "1756-L84E LOGIX5580E",
+        "originalLabel": "1756-L84E LOGIX5580E",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.10"
+        ],
+        "mac": [
+          "84:8a:8d:c3:ff:00",
+          "84:8a:8d:c3:ff:03",
+          "f4:54:33:a4:10:a8"
+        ],
+        "tags": [
+          {
+            "id": "PLC",
+            "label": "Controller",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "43d1102e-037b-512d-8404-f26021ca6274",
+              "label": "Device - Level 2",
+              "priority_order": 0
+            }
+          },
+          {
+            "id": "ROCKWELL_AUTOMATION",
+            "label": "Rockwell Automation",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "feebd529-0323-5eee-a3b3-aa8b471a293b",
+              "label": "System",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/rockwell_enip.svg"
+      },
+      "direction": "undetermined",
+      "flowCount": 0,
+      "eventsCount": 0,
+      "packetsCount": 2507,
+      "bytesCount": 172340,
+      "variablesCount": 0,
+      "variables": null
+    },
+    {
+      "id": "9e625355-846e-4c11-9aa7-94ff18ddd530_c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+      "firstActivity": 1780993966686,
+      "lastActivity": 1780993994384,
+      "tags": [
+        {
+          "id": "ARP",
+          "label": "ARP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "CIP_IO",
+          "label": "CIP-IO",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        },
+        {
+          "id": "ENIP",
+          "label": "EthernetIP",
+          "type": "flow",
+          "important": false,
+          "category": {
+            "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+            "label": "Protocol",
+            "priority_order": 0
+          }
+        }
+      ],
+      "left": {
+        "id": "9e625355-846e-4c11-9aa7-94ff18ddd530",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "1734-AENTR/C Ethernet Adapter",
+        "originalLabel": "1734-AENTR/C Ethernet Adapter",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.32"
+        ],
+        "mac": [
+          "5c:88:16:ba:66:02"
+        ],
+        "tags": [
+          {
+            "id": "IO",
+            "label": "IO Module",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "514c15ba-07fe-58a6-ae89-21a72e25177b",
+              "label": "Device - Level 0-1",
+              "priority_order": 0
+            }
+          },
+          {
+            "id": "ROCKWELL_AUTOMATION",
+            "label": "Rockwell Automation",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "feebd529-0323-5eee-a3b3-aa8b471a293b",
+              "label": "System",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/rockwell_enip.svg"
+      },
+      "right": {
+        "id": "c1f13faf-2c3b-4b4d-9074-35eaa004986b",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "1756-L84E LOGIX5580E",
+        "originalLabel": "1756-L84E LOGIX5580E",
+        "customLabel": "",
+        "ip": [
+          "192.168.40.10"
+        ],
+        "mac": [
+          "84:8a:8d:c3:ff:00",
+          "84:8a:8d:c3:ff:03",
+          "f4:54:33:a4:10:a8"
+        ],
+        "tags": [
+          {
+            "id": "PLC",
+            "label": "Controller",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "43d1102e-037b-512d-8404-f26021ca6274",
+              "label": "Device - Level 2",
+              "priority_order": 0
+            }
+          },
+          {
+            "id": "ROCKWELL_AUTOMATION",
+            "label": "Rockwell Automation",
+            "type": "component",
+            "important": false,
+            "category": {
+              "id": "feebd529-0323-5eee-a3b3-aa8b471a293b",
+              "label": "System",
+              "priority_order": 0
+            }
+          }
+        ],
+        "group": {
+          "id": "",
+          "label": "",
+          "description": "",
+          "comments": "",
+          "color": "#06a2c9",
+          "locked": false,
+          "groupIds": null,
+          "centerID": ""
+        },
+        "icon": "library/rockwell_enip.svg"
+      },
+      "direction": "undetermined",
+      "flowCount": 0,
+      "eventsCount": 0,
+      "packetsCount": 2507,
+      "bytesCount": 172340,
+      "variablesCount": 0,
+      "variables": null
+    }
+  ]
+}

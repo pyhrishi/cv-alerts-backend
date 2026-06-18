@@ -1,0 +1,36 @@
+{
+  "_endpoint": "/api/3.0/sensors",
+  "_count": 9,
+  "sample": [
+    {
+      "id": "8973ccd1-bf5d-413a-a130-cc0438d9535e",
+      "name": "cluster_overlay-merged.pcap",
+      "model": "PCAP",
+      "status": {
+        "lastReceivedSysinfo": -6795364578871
+      },
+      "creationTime": 1780993682853,
+      "filter": {}
+    },
+    {
+      "id": "4d020c13-7773-4088-8ac7-bd8bd943adcf",
+      "name": "cluster01-merged.pcap",
+      "model": "PCAP",
+      "status": {
+        "lastReceivedSysinfo": -6795364578871
+      },
+      "creationTime": 1780993711578,
+      "filter": {}
+    },
+    {
+      "id": "e8868753-ed42-4658-a3f3-db80eb7c401f",
+      "name": "cluster02-merged.pcap",
+      "model": "PCAP",
+      "status": {
+        "lastReceivedSysinfo": -6795364578871
+      },
+      "creationTime": 1780993730370,
+      "filter": {}
+    }
+  ]
+}

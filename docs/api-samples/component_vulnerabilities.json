@@ -1,0 +1,103 @@
+{
+  "_endpoint": "/api/3.0/components/590f6d7b-60dd-59bc-932d-f994d69d75e3/vulnerabilities",
+  "sample": [
+    {
+      "creationTime": "2022-04-01T07:49:41.028959Z",
+      "lastUpdate": "2024-05-15T11:15:46.730381Z",
+      "matchingTime": "2026-06-09T08:28:44.675324Z",
+      "publishTime": "2022-03-31T00:00:00Z",
+      "ackTime": null,
+      "ackAuthor": "",
+      "ackComment": "",
+      "id": "be4699ba-5d99-4958-888c-cf9539778589",
+      "cve": "CVE-2022-1161",
+      "vendorId": "",
+      "title": "Inclusion of Functionality from Untrusted Control Sphere Vulnerability in Rockwell Automation Logix Controllers",
+      "summary": "An attacker with the ability to modify a user program may change user program code on some ControlLogix, CompactLogix, and GuardLogix Control systems. Studio 5000 Logix Designer writes user-readable program code to a separate location than the executed compiled code, allowing an attacker to change one and not the other.",
+      "fullDescription": "",
+      "solution": "Rockwell Automation will inform customers of updated software as soon as available. Until then, customers using the affected software are directed towards risk mitigation and are encouraged, when possible, to combine this guidance with the general security guidelines for a comprehensive defense in depth strategy.",
+      "CVSS": 10,
+      "CVSSTemporal": 8.7,
+      "CVSSVersion": 3.1,
+      "CVSSVectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:U/RL:O/RC:C",
+      "links": [
+        {
+          "id": "66ef81b6-d770-4886-8133-94e5b84c7485",
+          "title": "Rockwell",
+          "link": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1134276",
+          "order": 0
+        },
+        {
+          "id": "a2e3a059-d8d4-4b83-a66a-7f87dc710862",
+          "title": "us-cert.cisa.gov",
+          "link": "https://us-cert.cisa.gov/ics/advisories/ICSA-22-090-05",
+          "order": 0
+        }
+      ],
+      "reasons": [
+        "model-ref"
+      ]
+    },
+    {
+      "creationTime": "2021-03-02T14:02:57.39394Z",
+      "lastUpdate": "2024-05-15T11:10:11.826885Z",
+      "matchingTime": "2026-06-09T08:28:44.675324Z",
+      "publishTime": "2021-02-24T23:00:00Z",
+      "ackTime": null,
+      "ackAuthor": "",
+      "ackComment": "",
+      "id": "b2ace7ce-afb7-4a8d-b30d-936a2b8712a3",
+      "cve": "CVE-2021-22681",
+      "vendorId": "",
+      "title": "Insufficiently protected credentials in Logix controllers",
+      "summary": "Studio 5000 Logix Designer uses a key to verify Logix controllers are communicating with the affected Rockwell Automation products. The product is vulnerable because an unauthenticated attacker could bypass this verification mechanism and authenticate with Logix controllers.",
+      "fullDescription": "",
+      "solution": "\u2022  ControlLogix 5580 v32 or later: \n\u2022\tPut controller\u2019s mode switch to \u201cRun\u201d mode.\n\u2022\tIf the above cannot be deployed, the followings mitigations are recommended: \no\tDeploy CIP Security for Logix Designer connections through the front port. CIP Security prevents unauthorized connection when deployed properly.\no\tIf not using the front port, use a 1756-EN4TR ControlLogix Ethernet/IP Module and deploy CIP Security. The 1756-EN4TR supports CIP Security which prevents unauthorized connections when properly deployed.\n\n\u2022  ControlLogix 5580 v31: \n\u2022\tPut controller\u2019s mode switch to \u201cRun\u201d mode.\n\u2022\tIf the above cannot be deployed, the following mitigations are recommended: \no\tApply v32 or later and follow mitigations actions outlined above.\no\tIf unable to apply a newer version, use a 1756-EN4TR ControlLogix EtherNet/IP Module and deploy CIP Security. The 1756-EN4TR supports CIP Security, which prevents unauthorized connections when properly deployed.\n\n\u2022  ControlLogix 5570 v31 or later: \n\u2022\tPut controller\u2019s mode switch to \u201cRun\u201d mode.\n\u2022\tIf the above cannot be deployed, the following mitigations are recommended: \no\tUse a 1756-EN4TR ControlLogix EtherNet/IP Module and deploy CIP Security. The 1756-EN4TR supports CIP Security, which prevents unauthorized connections when properly deployed.\n\n\u2022  ControlLogix 5580 v28-v30, ControlLogix 5570 v18 or later, ControlLogix 5560 v16 or later, ControlLogix 5550 v16, GuardLogix 5580 v31 or later, GuardLogix 5570 v20 or later, GuardLogix 5560 v16 or later, 1768 CompactLogix v16 or later, 1769 CompactLogix v16 or later, CompactLogix 5370 v20 or later, CompactLogix 5380 v28 or later, CompactLogix 5480 v32 or later, Compact GuardLogix 5370 v28 or later, Compact GuardLogix 5380 v31 or later, FlexLogix 1794-L34 v16, DriveLogix 5370 v16 or later. \n\u2022\tPut controller\u2019s mode switch to \u201cRun\u201d mode.\n\n\u2022  SoftLogix 5800: No additional mitigation available. Follow the Converged Plantwide Ethernet (CPwE) Design and Implementation Guide.",
+      "CVSS": 9.8,
+      "CVSSTemporal": 8.5,
+      "CVSSVersion": 3.1,
+      "CVSSVectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+      "links": [
+        {
+          "id": "71c25e57-f2dc-4a73-927d-2f236dc2ce76",
+          "title": "Rockwell",
+          "link": "https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1130301",
+          "order": 0
+        },
+        {
+          "id": "b7e67f9b-a70b-4fce-bc80-f736ad9296ac",
+          "title": "ICS Cert",
+          "link": "https://us-cert.cisa.gov/ics/advisories/icsa-21-056-03",
+          "order": 0
+        }
+      ],
+      "reasons": [
+        "model-ref"
+      ]
+    },
+    {
+      "creationTime": "2024-04-19T14:07:53.54367Z",
+      "lastUpdate": "2025-04-24T13:43:07.644367Z",
+      "matchingTime": "2026-06-09T08:28:44.675324Z",
+      "publishTime": "2024-04-10T22:00:00Z",
+      "ackTime": null,
+      "ackAuthor": "",
+      "ackComment": "",
+      "id": "b53f64c1-e845-4ff8-b90c-ee2bd4159531",
+      "cve": "CVE-2024-3493",
+      "vendorId": "SD1666",
+      "title": "Improper Input Validation Vulnerability in Rockwell ControlLogix and GuardLogix",
+      "summary": "A specific malformed fragmented packet type (fragmented packets may be generated automatically by devices that send large amounts of data) can cause a major nonrecoverable fault (MNRF). If exploited, the affected product will become unavailable and require a manual restart to recover it. Additionally, an MNRF could result in a loss of view and/or control of connected devices.",
+      "fullDescription": "",
+      "solution": "ControlLogix 5580, GuardLogix 5580, CompactLogix 5380: update to V35.013, V36.011 and later\n1756-EN4TR: update to V6.001 and later",
+      "CVSS": 8.6,
+      "CVSSTemporal": 8.2,
+      "CVSSVersion": 3.1,
+      "CVSSVectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:X/RL:O/RC:C",
+      "links": [],
+      "reasons": [
+        "fw-version"
+      ]
+    }
+  ]
+}

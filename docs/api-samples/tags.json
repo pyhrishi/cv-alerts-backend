@@ -1,0 +1,47 @@
+{
+  "_endpoint": "/api/3.0/tags",
+  "_item_count_in_sample": 442,
+  "sample": [
+    {
+      "id": "2070_TRAFFIC_SIGNAL_DATA",
+      "label": "Traffic Signal Management and Surveillance System (TSMSS)",
+      "description": "Traffic Signal Management and Surveillance System (TSMSS) protocol.  Seen between 2070 Controler and backend TSMSS communications servers.",
+      "type": "flow",
+      "domain": "ot",
+      "important": true,
+      "category": {
+        "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+        "label": "Protocol",
+        "priority_order": 0
+      },
+      "riskScoreDescription": "."
+    },
+    {
+      "id": "2070_VEHICLE_DATA_OCRMS",
+      "label": "Ramp Metering data (OCRMS format)",
+      "description": "DOT proprietary OCRMS protocol for Ramp Metering compliant devices",
+      "type": "flow",
+      "domain": "ot",
+      "important": false,
+      "category": {
+        "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+        "label": "Protocol",
+        "priority_order": 0
+      }
+    },
+    {
+      "id": "2070_VEHICLE_DATA_REV8",
+      "label": "Ramp Metering data (REV8 format)",
+      "description": "Vehicle Speed and Length Classification Information.\nREV8 protocol issued for example by 2070 ITS Ramp Metering Controller",
+      "type": "flow",
+      "domain": "ot",
+      "important": false,
+      "category": {
+        "id": "b6d3d12d-9e34-5afc-89e2-3fc32fdaf1a2",
+        "label": "Protocol",
+        "priority_order": 0
+      },
+      "riskScoreDescription": "."
+    }
+  ]
+}

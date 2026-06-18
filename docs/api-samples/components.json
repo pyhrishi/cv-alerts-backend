@@ -1,0 +1,230 @@
+{
+  "_endpoint": "/api/3.0/components",
+  "_item_count_in_sample": 5,
+  "sample": [
+    {
+      "aggregation": {
+        "type": "",
+        "components": []
+      },
+      "ancestors": null,
+      "credentialsCount": 0,
+      "customLabel": "",
+      "device": null,
+      "eventsCount": 0,
+      "externalCommunicationsCount": 0,
+      "firstActivity": 1780993694649,
+      "flowsCount": 0,
+      "flowsTags": [],
+      "group": null,
+      "icon": "library/broadcast.png",
+      "id": "0f5524c0-72f5-50a1-9c52-bfdc205b3053",
+      "ip": "",
+      "label": "Broadcast ff:ff:ff",
+      "lastActivity": 1780993966691,
+      "mac": "ff:ff:ff:ff:ff:ff",
+      "normalizedProperties": [
+        {
+          "key": "ip",
+          "value": ""
+        },
+        {
+          "key": "mac",
+          "value": "ff:ff:ff:ff:ff:ff"
+        },
+        {
+          "key": "name",
+          "value": "Broadcast ff:ff:ff"
+        },
+        {
+          "key": "vendor-name",
+          "value": "Broadcast"
+        }
+      ],
+      "originalLabel": "Broadcast ff:ff:ff",
+      "otherProperties": [
+        {
+          "key": "name-mac",
+          "value": "Broadcast ff:ff:ff"
+        },
+        {
+          "key": "vendor-mac",
+          "value": "Broadcast"
+        }
+      ],
+      "requestsCount": 0,
+      "tags": [],
+      "userProperties": [],
+      "variablesCount": 0,
+      "vulnerabilitiesCount": 0
+    },
+    {
+      "aggregation": {
+        "type": "",
+        "components": []
+      },
+      "ancestors": null,
+      "credentialsCount": 0,
+      "customLabel": "",
+      "device": {
+        "id": "2b2cb6f3-dbf8-496a-8cb2-ce5e27cff860",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "192.168.10.42",
+        "originalLabel": "192.168.10.42",
+        "customLabel": "",
+        "ip": null,
+        "mac": null,
+        "tags": [],
+        "group": null,
+        "icon": "library/default.svg"
+      },
+      "deviceUserProperties": [],
+      "eventsCount": 2,
+      "externalCommunicationsCount": 0,
+      "firstActivity": 1780993694649,
+      "flowsCount": 0,
+      "flowsTags": [],
+      "group": null,
+      "icon": "library/siemens.svg",
+      "id": "1b84b901-b3e9-505e-a8ee-2128d5c4b50a",
+      "ip": "192.168.10.42",
+      "label": "192.168.10.42",
+      "lastActivity": 1780993694840,
+      "mac": "88:3f:99:01:25:e4",
+      "normalizedProperties": [
+        {
+          "key": "ip",
+          "value": "192.168.10.42"
+        },
+        {
+          "key": "mac",
+          "value": "88:3f:99:01:25:e4"
+        },
+        {
+          "key": "name",
+          "value": "192.168.10.42"
+        },
+        {
+          "key": "public-ip",
+          "value": "no"
+        },
+        {
+          "key": "vendor-name",
+          "value": "Siemens AG"
+        }
+      ],
+      "originalLabel": "192.168.10.42",
+      "otherProperties": [
+        {
+          "key": "name-ip",
+          "value": "192.168.10.42"
+        },
+        {
+          "key": "vendor-mac",
+          "value": "Siemens AG"
+        }
+      ],
+      "requestsCount": 0,
+      "tags": [
+        {
+          "id": "IO",
+          "label": "IO Module",
+          "important": false,
+          "category": {
+            "id": "514c15ba-07fe-58a6-ae89-21a72e25177b",
+            "label": "Device - Level 0-1",
+            "priority_order": 0
+          }
+        }
+      ],
+      "userProperties": [],
+      "variablesCount": 0,
+      "vulnerabilitiesCount": 0
+    },
+    {
+      "aggregation": {
+        "type": "",
+        "components": []
+      },
+      "ancestors": null,
+      "credentialsCount": 0,
+      "customLabel": "",
+      "device": {
+        "id": "547ec1f7-fa82-49b5-8b88-5e092ff651c4",
+        "deviceType": "",
+        "isDevice": true,
+        "label": "192.168.10.43",
+        "originalLabel": "192.168.10.43",
+        "customLabel": "",
+        "ip": null,
+        "mac": null,
+        "tags": [],
+        "group": null,
+        "icon": "library/default.svg"
+      },
+      "deviceUserProperties": [],
+      "eventsCount": 2,
+      "externalCommunicationsCount": 0,
+      "firstActivity": 1780993694649,
+      "flowsCount": 0,
+      "flowsTags": [],
+      "group": null,
+      "icon": "library/siemens.svg",
+      "id": "3a939265-1940-5959-8898-5599e28aeee5",
+      "ip": "192.168.10.43",
+      "label": "192.168.10.43",
+      "lastActivity": 1780993694835,
+      "mac": "88:3f:99:01:25:e8",
+      "normalizedProperties": [
+        {
+          "key": "ip",
+          "value": "192.168.10.43"
+        },
+        {
+          "key": "mac",
+          "value": "88:3f:99:01:25:e8"
+        },
+        {
+          "key": "name",
+          "value": "192.168.10.43"
+        },
+        {
+          "key": "public-ip",
+          "value": "no"
+        },
+        {
+          "key": "vendor-name",
+          "value": "Siemens AG"
+        }
+      ],
+      "originalLabel": "192.168.10.43",
+      "otherProperties": [
+        {
+          "key": "name-ip",
+          "value": "192.168.10.43"
+        },
+        {
+          "key": "vendor-mac",
+          "value": "Siemens AG"
+        }
+      ],
+      "requestsCount": 0,
+      "tags": [
+        {
+          "id": "IO",
+          "label": "IO Module",
+          "important": false,
+          "category": {
+            "id": "514c15ba-07fe-58a6-ae89-21a72e25177b",
+            "label": "Device - Level 0-1",
+            "priority_order": 0
+          }
+        }
+      ],
+      "userProperties": [],
+      "variablesCount": 0,
+      "vulnerabilitiesCount": 0
+    }
+  ]
+}

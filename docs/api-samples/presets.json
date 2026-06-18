@@ -1,0 +1,156 @@
+{
+  "_endpoint": "/api/3.0/presets",
+  "_item_count_in_sample": 36,
+  "sample": [
+    {
+      "id": "c020d5e8-01aa-4785-aa9d-2493b85d704e",
+      "label": "cluster01-merged.pcap",
+      "custom": true,
+      "imported": false,
+      "creatorEmail": "daeckste@cisco.com",
+      "lastUpdate": 1780993711589,
+      "filters": {
+        "tags": [],
+        "groups": [],
+        "sensors": [
+          {
+            "operator": "include",
+            "value": {
+              "id": "4d020c13-7773-4088-8ac7-bd8bd943adcf",
+              "label": "cluster01-merged.pcap",
+              "ip": "",
+              "serialNumber": "",
+              "captureMode": "",
+              "centerId": null
+            }
+          }
+        ],
+        "centers": [],
+        "networks": [],
+        "riskScores": []
+      },
+      "componentTagless": "indeterminate",
+      "activityTagless": "indeterminate",
+      "groupless": "indeterminate",
+      "hasExternalCommunications": "indeterminate",
+      "priority_order": 0,
+      "badges": [
+        {
+          "id": "469f31fb-0712-4692-a9f7-77295590daab",
+          "iconKey": "custom",
+          "label": "Custom",
+          "description": "My personal preset"
+        }
+      ],
+      "category": {
+        "id": "f21042d4-0e9f-5d4b-8872-cd04332008e9",
+        "label": "My preset",
+        "priority_order": 0
+      },
+      "search": "",
+      "baselines": [],
+      "operationalStarred": false,
+      "securityStarred": false
+    },
+    {
+      "id": "ef6b69a2-5f98-41ec-aef1-01a24a010fea",
+      "label": "cluster02-merged.pcap",
+      "custom": true,
+      "imported": false,
+      "creatorEmail": "daeckste@cisco.com",
+      "lastUpdate": 1780993730380,
+      "filters": {
+        "tags": [],
+        "groups": [],
+        "sensors": [
+          {
+            "operator": "include",
+            "value": {
+              "id": "e8868753-ed42-4658-a3f3-db80eb7c401f",
+              "label": "cluster02-merged.pcap",
+              "ip": "",
+              "serialNumber": "",
+              "captureMode": "",
+              "centerId": null
+            }
+          }
+        ],
+        "centers": [],
+        "networks": [],
+        "riskScores": []
+      },
+      "componentTagless": "indeterminate",
+      "activityTagless": "indeterminate",
+      "groupless": "indeterminate",
+      "hasExternalCommunications": "indeterminate",
+      "priority_order": 0,
+      "badges": [
+        {
+          "id": "469f31fb-0712-4692-a9f7-77295590daab",
+          "iconKey": "custom",
+          "label": "Custom",
+          "description": "My personal preset"
+        }
+      ],
+      "category": {
+        "id": "f21042d4-0e9f-5d4b-8872-cd04332008e9",
+        "label": "My preset",
+        "priority_order": 0
+      },
+      "search": "",
+      "baselines": [],
+      "operationalStarred": false,
+      "securityStarred": false
+    },
+    {
+      "id": "bc424356-67ee-4f63-b4b5-6bdae2ae4a80",
+      "label": "cluster03-merged.pcap",
+      "custom": true,
+      "imported": false,
+      "creatorEmail": "daeckste@cisco.com",
+      "lastUpdate": 1780993752552,
+      "filters": {
+        "tags": [],
+        "groups": [],
+        "sensors": [
+          {
+            "operator": "include",
+            "value": {
+              "id": "e8e5d341-956f-468d-ab75-d572c44a80d6",
+              "label": "cluster03-merged.pcap",
+              "ip": "",
+              "serialNumber": "",
+              "captureMode": "",
+              "centerId": null
+            }
+          }
+        ],
+        "centers": [],
+        "networks": [],
+        "riskScores": []
+      },
+      "componentTagless": "indeterminate",
+      "activityTagless": "indeterminate",
+      "groupless": "indeterminate",
+      "hasExternalCommunications": "indeterminate",
+      "priority_order": 0,
+      "badges": [
+        {
+          "id": "469f31fb-0712-4692-a9f7-77295590daab",
+          "iconKey": "custom",
+          "label": "Custom",
+          "description": "My personal preset"
+        }
+      ],
+      "category": {
+        "id": "f21042d4-0e9f-5d4b-8872-cd04332008e9",
+        "label": "My preset",
+        "priority_order": 0
+      },
+      "search": "",
+      "baselines": [],
+      "operationalStarred": false,
+      "securityStarred": false
+    }
+  ]
+}

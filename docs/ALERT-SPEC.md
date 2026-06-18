@@ -131,7 +131,12 @@ during discovery).
 `.CVSSVersion`; `components[].vulnerabilitiesCount`; the asset's `ip`/`mac` vs the activity graph;
 `Controller`/`Level 2` tag.
 
-**Severity rule (derived, `_severity`):** `score ≥90 → critical`, `≥80 → high`, `≥65 → medium`, else `low`.
+**Severity rule (tightened gate, `_severity`):** `critical` **only if** `max_cvss ≥ 9` **AND**
+the asset is **cross-zone reachable** (participates in an activity spanning two Purdue levels)
+**AND** it is **control-plane** (a controller or Purdue Level ≤ 2). Any other firing alert is
+`high` (the `medium`/`low` bands apply only if `min_score` is lowered). The gate is deliberately
+narrow so "critical" means *severely vulnerable AND on the control plane AND exposed across zones*
+— the real top-priority condition, not just a high score.
 
 **Evidence captured:** `exposure_score` + full `score_breakdown`, `cve_count`, `max_cvss`,
 `communicating`, `is_controller`, `purdue_level`, and the **top 5 CVEs** (id, CVSS, title).
@@ -144,8 +149,11 @@ directly disrupt operations.
 **Recommended action:** prioritise patching/mitigation; if patching is impossible, isolate behind a
 cell firewall and restrict exposed protocols/ports.
 
-**Real result:** **15 fired** (critical=12, high=3). Top: Cisco `IE3400-LINE{2,3,6}` industrial
-switches — score 95.0, 75–80 CVEs, max CVSS 10.0, all communicating Level-2 assets.
+**Real result:** **15 fired** (critical=12, high=3). The critical set is dominated by the
+**Cisco IE3400 / IE9300 industrial switches — i.e. the network infrastructure itself is the
+single highest-exposure asset class on this OT network** (CVSS 10, 40–80 CVEs each, Level-2,
+cross-zone). The 3 `high` are the same kind of Level-2 switch but not cross-zone in this capture,
+which is exactly what the tightened gate is meant to separate.
 
 ---
 

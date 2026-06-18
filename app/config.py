@@ -26,3 +26,14 @@ def cv_base_url() -> str:
 def cv_api_token() -> str:
     # Returned only to the CV client; never printed or sent to the browser.
     return _require("CV_API_TOKEN")
+
+
+def allowed_origins() -> list[str]:
+    """Comma-separated CORS allowlist. Tight by default; NEVER '*' in the submission."""
+    raw = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000")
+    return [o.strip() for o in raw.split(",") if o.strip()]
+
+
+def cache_ttl_seconds() -> float:
+    return float(os.getenv("CACHE_TTL_SECONDS", "60"))
+

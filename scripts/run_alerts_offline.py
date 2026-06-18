@@ -22,7 +22,7 @@ except Exception:  # noqa: BLE001
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from app.alerts.custom import communicating_keys, detect_vulnerable_exposure  # noqa: E402
+from app.alerts.custom import communicating_keys, cross_zone_keys, detect_vulnerable_exposure  # noqa: E402
 from app.alerts.operations import detect_silent_assets  # noqa: E402
 from app.alerts.security import detect_cross_zone_violations  # noqa: E402
 from app.models import Activity, Alert, Asset, Policy, Vulnerability  # noqa: E402
@@ -86,13 +86,15 @@ def run(args) -> dict[str, list[Alert]]:
     ]
 
     comm_ips, comm_macs = communicating_keys(activities)
+    cz_ips, cz_macs = cross_zone_keys(activities)
     ref = max((a.last_seen_ms for a in activities if a.last_seen_ms), default=None)
 
     return {
         "operations": detect_silent_assets(assets, min_seconds_behind_zone_median=args.silence_seconds),
         "security": detect_cross_zone_violations(activities, policy),
         "custom": detect_vulnerable_exposure(
-            assets_with_vulns, comm_ips, comm_macs, min_score=args.vuln_min_score,
+            assets_with_vulns, comm_ips, comm_macs,
+            cross_zone_ips=cz_ips, cross_zone_macs=cz_macs, min_score=args.vuln_min_score,
             detected_at=__import__("app.alerts._util", fromlist=["ms_to_iso"]).ms_to_iso(ref),
         ),
     }, len(assets), len(activities), len(assets_with_vulns)

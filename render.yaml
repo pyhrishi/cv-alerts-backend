@@ -14,7 +14,7 @@ services:
       - key: DATA_MODE
         value: snapshot            # public demo: bundled data only, never calls the Center
       - key: ALLOWED_ORIGINS
-        value: "http://localhost:3000"   # PLACEHOLDER — replaced with the exact Vercel URL after FE deploy
+        value: "https://cv-alerts-frontend.vercel.app,http://localhost:3000"
       - key: CACHE_TTL_SECONDS
         value: "60"
       # --- live mode only (leave unset for the snapshot demo) ---
